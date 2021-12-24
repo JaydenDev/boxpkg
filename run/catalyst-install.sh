@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Build Deps: NPM"
+echo "Build Deps: NPM, dpkg, rpm (fedora), apt (ubuntu/debian), rpmbuild"
 which npm || exit
 cd catalyst
 npm install
@@ -11,6 +11,7 @@ cd make
 cd
 which apt || distrib=RPM
 which rpm || distrib=DEB
+which rpmbuild || exit
 if [[ $distrib == "DEB" ]]
 then
 	cd deb
