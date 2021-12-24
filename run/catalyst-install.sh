@@ -9,7 +9,7 @@ npm run make
 cd out
 cd make
 cd x64
-which dpkg || distrib=RPM
+which apt || distrib=RPM
 which rpm || distrib=DEB
 if [[ $distrib == "DEB" ]]
 then
