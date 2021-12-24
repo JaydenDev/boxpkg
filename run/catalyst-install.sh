@@ -8,17 +8,19 @@ npm run tailwind:once
 npm run make
 cd out
 cd make
-cd x64
+cd
 which apt || distrib=RPM
 which rpm || distrib=DEB
 if [[ $distrib == "DEB" ]]
 then
 	cd deb
+	cd x64
 	sudo dpkg -i *.deb
 fi
 
 if [[ $distrib == "RPM" ]]
 	cd deb
+	cd x64
 	sudo rpm -i *.rpm
 fi
 echo "Installed successfully"
