@@ -1,10 +1,10 @@
 #!/bin/bash
-echo Build Deps: NPM
+echo "Build Deps: NPM"
 which npm || exit
 cd catalyst
 npm install
 echo "Building for your platform"
-npm run tailwind
+npm run tailwind:once
 npm run make
 cd out
 cd make
@@ -21,4 +21,4 @@ if [[ $distrib == "RPM" ]]
 	cd deb
 	sudo rpm -i *.rpm
 fi
-echo Installed succesfuly 
+echo "Installed successfully"
