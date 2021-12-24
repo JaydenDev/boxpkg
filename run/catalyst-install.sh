@@ -20,6 +20,7 @@ then
 fi
 
 if [[ $distrib == "RPM" ]]
+then
 	cd deb
 	cd x64
 	sudo rpm -i *.rpm
