@@ -1,0 +1,23 @@
+#!/bin/bash
+# boxpkg package manager
+# to install JaydenDev software
+
+if [[ $1 == "" ]]
+then
+	exit
+fi
+
+
+if [[ $1 == "install" ]]
+then
+	cat sources.lst | grep $2 || err=yes
+	
+	if [[ $err == "yes" ]]
+	then
+		echo "Failure"
+	else
+		echo "Package Found"
+		which git || echo "Git not found, install before proceeding"
+		git clone https://github.com/JaydenDev/$2
+	fi
+fi
