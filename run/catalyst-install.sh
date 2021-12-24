@@ -4,7 +4,7 @@ which npm || exit
 cd catalyst
 npm install
 echo "Building for your platform"
-npm run tailwind
+npm run tailwind:once
 npm run make
 cd out
 cd make
