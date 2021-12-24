@@ -19,5 +19,6 @@ then
 		echo "Package Found"
 		which git || echo "Git not found, install before proceeding"
 		git clone https://github.com/JaydenDev/$2
+		bash run/$2-install.sh
 	fi
 fi
